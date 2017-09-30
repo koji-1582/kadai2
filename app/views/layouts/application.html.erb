@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Kadai2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-  <% if user_signed_in? %>
-  <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-  <li><%= link_to 'マイページ', edit_user_registration_path %></li>
-  <% else %>
-  <li><%= link_to 'ログイン', new_user_session_path %></li>
-  <li><%= link_to 'サインアップ', new_user_registration_path %></li>
-  <% end %>
-  <li><%= link_to "投稿", posts_path %>></li>
-  <li><%= link_to "トップページ", root_path %></li>
+  <html>
+  <head>
+    <title>Kadai2</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+      <% if user_signed_in? %>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+      <li><%= link_to 'マイページ', edit_user_registration_path %></li>
+      <% else %>
+      <li><%= link_to 'ログイン', new_user_session_path %></li>
+      <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+      <% end %>
+      <li><%= link_to "投稿", posts_path %>></li>
+      <li><%= link_to "トップページ", root_path %></li>
+    </header>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
-</html>
+  </body>
+  </html>

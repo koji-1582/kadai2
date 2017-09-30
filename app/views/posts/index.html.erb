@@ -8,6 +8,7 @@
       <p><strong><%= post.user.name if post.user %></strong></p>
       <div class="avatar"><%= profile_img(post.user) %></div>
   　　　<p>本文:<%= post.content %></p>
+       <%= image_tag(post.image) %>
   　　　<%= link_to "編集", edit_post_path(post.id), class: 'btn btn-default btn-sm btn-success' %>
   　　　<%= link_to "削除", post_path(post.id), method: :delete, data: { confirm: '本当に削除していいですか？'}, class: 'btn btn-default btn-sm btn btn-danger'  %>
      </div>
