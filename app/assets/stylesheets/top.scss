@@ -21,11 +21,12 @@ header{
   width: 100%;
   height: 70px;
   margin-top: auto;
-
+  z-index: 9999;
+  position: fixed;
 }
 
 .main{
-  margin-top: 30px;
+
 }
 
 .flash{
@@ -33,4 +34,7 @@ header{
   padding-top: auto;
   padding-bottom: 10px;
   text-align: center;
+}
+img {
+  margin-top: 150px;
 }
