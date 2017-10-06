@@ -32,3 +32,7 @@ input[type="submit"].btn-block{
  .user_name{
    margin-right: auto;
  }
+ .header{
+   z-index: 9999;
+   position: fixed;
+ }
